@@ -1,3 +1,16 @@
+" Detect platform-specific vim config directory
+if (has('win32') || has('win64')) && &shellcmdflag =~ '/'
+    let g:vimdir='~/vimfiles/'
+else
+    let g:vimdir='~/.vim/'
+endif
+
+" Load plugins
+let s:pluginfile = expand(g:vimdir . 'plugins.vim')
+if filereadable(s:pluginfile)
+    execute 'source' s:pluginfile
+endif
+
 " General options
 " ---------------
 
