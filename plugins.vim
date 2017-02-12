@@ -19,6 +19,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 
 Plug 'michaeljsmith/vim-indent-object'
@@ -27,6 +28,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 
 " --- Language-specific plugins ---
+
+" Git
+Plug 'tpope/vim-git'
 
 " HTML / CSS
 Plug 'othree/html5.vim'
