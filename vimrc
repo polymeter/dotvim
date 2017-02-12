@@ -112,6 +112,12 @@ endif
 " Colors
 set background=dark
 
+" Solarized is used as a plugin, so only attempt to set if plugins are loaded.
+if exists('g:plugins_loaded')
+    colorscheme solarized
+    call togglebg#map("<F11>") " solarized-specific function
+endif
+
 " Allow color schemes to do bright colors without forcing bold.
 " (taken from tpope's vim-sensible)
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
