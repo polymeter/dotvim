@@ -27,6 +27,13 @@ Plug 'tpope/vim-surround'
 
 " --- Language-specific plugins ---
 
+" HTML / CSS
+Plug 'othree/html5.vim'
+Plug 'alvan/vim-closetag'
+
+" Jinja2
+Plug 'Glench/Vim-Jinja2-Syntax'
+
 " Python
 Plug 'davidhalter/jedi-vim'
 Plug 'tmhedberg/SimpylFold'
