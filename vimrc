@@ -148,6 +148,9 @@ if exists('g:plugins_loaded')
         \ 'S'  : 'SL',
         \ '' : 'SB',
         \ }
+
+    " NERDTree
+    map <F2> :NERDTreeToggle<CR>
 endif
 
 " Mappings etc.

@@ -19,6 +19,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'scrooloose/nerdtree'
+
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-surround'
