@@ -124,6 +124,32 @@ if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
 
+" Plugins
+" -------
+
+" Only attempt to configure plugins if vim-plug was loaded
+if exists('g:plugins_loaded')
+    " --- General plugins ---
+
+    " Airline
+    let g:airline_theme='solarized'
+    let g:airline_left_sep=''
+    let g:airline_right_sep=''
+    let g:airline_mode_map = {
+        \ '__' : '-',
+        \ 'n'  : 'N',
+        \ 'i'  : 'I',
+        \ 'R'  : 'R',
+        \ 'c'  : 'C',
+        \ 'v'  : 'V',
+        \ 'V'  : 'VL',
+        \ '' : 'VB',
+        \ 's'  : 'S',
+        \ 'S'  : 'SL',
+        \ '' : 'SB',
+        \ }
+endif
+
 " Mappings etc.
 " -------------
 

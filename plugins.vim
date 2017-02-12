@@ -13,8 +13,11 @@ endif
 " Plugins are placed in the 'plugged' directory next to vimrc
 silent! if plug#begin(g:vimdir . 'plugged')
 
+" --- General plugins ---
 Plug 'altercation/vim-colors-solarized'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Energize!
 call plug#end()
 
