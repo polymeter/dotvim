@@ -151,6 +151,11 @@ if exists('g:plugins_loaded')
 
     " NERDTree
     map <F2> :NERDTreeToggle<CR>
+
+    " --- Language-specific plugins ---
+
+    " Python
+    let g:jedi#force_py_version = 3
 endif
 
 " Mappings etc.

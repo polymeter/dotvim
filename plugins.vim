@@ -25,6 +25,13 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-surround'
 
+" --- Language-specific plugins ---
+
+" Python
+Plug 'davidhalter/jedi-vim'
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/python_match.vim'
+
 " Energize!
 call plug#end()
 
