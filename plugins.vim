@@ -18,6 +18,7 @@ Plug 'altercation/vim-colors-solarized'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
