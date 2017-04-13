@@ -42,6 +42,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 
 " Python
 Plug 'davidhalter/jedi-vim'
+Plug 'mitsuhiko/vim-python-combined'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/python_match.vim'
 
