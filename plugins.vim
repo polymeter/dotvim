@@ -25,7 +25,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/matchit.zip'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-commentary'

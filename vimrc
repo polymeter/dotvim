@@ -148,21 +148,16 @@ if exists('g:plugins_loaded')
         \ 'S'  : 'SL',
         \ '' : 'SB',
         \ }
+    let g:airline#extensions#ale#enabled = 1
 
     " NERDTree
     map <F2> :NERDTreeToggle<CR>
 
-    " Syntastic
-    let g:syntastic_aggregate_errors = 1
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_enable_signs = 1
-    let g:syntastic_error_symbol = 'X'
-    let g:syntastic_style_error_symbol = 'S'
-    let g:syntastic_warning_symbol = 'x'
-    let g:syntastic_style_warning_symbol = 's'
+    " ALE
+    let g:ale_echo_msg_format = '[%linter%] %s'
+    let g:ale_fixers = {
+        \ 'python': ['isort']
+    \ }
 
     " --- Language-specific plugins ---
 
