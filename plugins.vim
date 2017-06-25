@@ -28,6 +28,8 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-commentary'
+
 " --- Language-specific plugins ---
 
 " Git
