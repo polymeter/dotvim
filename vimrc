@@ -163,7 +163,6 @@ if exists('g:plugins_loaded')
 
     " Python
     let g:jedi#force_py_version = 3
-    let g:syntastic_python_checkers = ['flake8']
 endif
 
 " Mappings etc.
