@@ -124,6 +124,11 @@ if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
 
+" Mappings etc.
+" -------------
+
+let mapleader=","
+
 " Plugins
 " -------
 
@@ -164,11 +169,6 @@ if exists('g:plugins_loaded')
     " Python
     let g:jedi#force_py_version = 3
 endif
-
-" Mappings etc.
-" -------------
-
-let mapleader=","
 
 " Commands
 " --------
