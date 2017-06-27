@@ -128,6 +128,7 @@ endif
 " -------------
 
 let mapleader=","
+let maplocalleader="\\"
 
 " Plugins
 " -------
@@ -165,6 +166,14 @@ if exists('g:plugins_loaded')
     \ }
 
     " --- Language-specific plugins ---
+
+    " LaTeX
+    let g:tex_flavor = 'latex'
+    if has('gui_running')
+        let g:vimtex_compiler_progname = "gvim"
+    else
+        let g:vimtex_compiler_progname = "vim"
+    endif
 
     " Python
     let g:jedi#force_py_version = 3

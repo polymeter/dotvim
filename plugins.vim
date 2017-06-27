@@ -42,6 +42,9 @@ Plug 'alvan/vim-closetag'
 " Jinja2
 Plug 'Glench/Vim-Jinja2-Syntax'
 
+" LaTeX
+Plug 'lervag/vimtex'
+
 " Python
 Plug 'davidhalter/jedi-vim'
 Plug 'mitsuhiko/vim-python-combined'
