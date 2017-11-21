@@ -197,3 +197,9 @@ function! StripTrailingWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
+
+" Load local machine-specific config, if present
+let s:localrcfile = expand(g:vimdir . 'vimrc.local')
+if filereadable(s:localrcfile)
+    execute 'source' s:localrcfile
+endif
