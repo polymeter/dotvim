@@ -14,8 +14,6 @@ endif
 " General options
 " ---------------
 
-set nocompatible
-
 filetype plugin indent on
 syntax on
 
@@ -63,7 +61,6 @@ set pastetoggle=<F12>
 set shiftround              " Indent only in multiples of shiftwidth
 set shiftwidth=4            " Indentation step size
 set softtabstop=4           " <Tab> presses etc. count for 4 spaces
-set tabstop=4               " A real tab counts for four spaces
 
 " File management and temporary files
 set autoread        " Automatically read files when changed on disk
@@ -157,7 +154,7 @@ if exists('g:plugins_loaded')
     let g:airline#extensions#ale#enabled = 1
 
     " NERDTree
-    map <F2> :NERDTreeToggle<CR>
+    nnoremap <F2> :NERDTreeToggle<CR>
 
     " ALE
     let g:ale_echo_msg_format = '[%linter%] %s'
@@ -188,8 +185,12 @@ endif
 " --------
 
 " Strip trailing whitespace on save
-autocmd BufWritePre * call StripTrailingWhitespace()
-function! StripTrailingWhitespace()
+augroup StripTrailWS
+    autocmd!
+    autocmd BufWritePre * call StripTrailingWhitespace()
+augroup END
+
+function! StripTrailingWhitespace() abort
     let _s=@/
     let l = line(".")
     let c = col(".")
