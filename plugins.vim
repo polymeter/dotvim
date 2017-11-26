@@ -10,7 +10,6 @@ if !exists('g:vimdir')
     endif
 endif
 
-" Plugins are placed in the 'plugged' directory next to vimrc
 silent! if plug#begin(g:vimdir . 'plugged')
 
 " --- General plugins ---
@@ -51,6 +50,5 @@ Plug 'mitsuhiko/vim-python-combined'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/python_match.vim'
 
-" Energize!
 call plug#end()
 endif

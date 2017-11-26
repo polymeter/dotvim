@@ -11,10 +11,11 @@ if filereadable(s:pluginfile)
     execute 'source' s:pluginfile
 endif
 
-" General options
-" ---------------
+" General
+" -------
 
-" Don't use latin1 (taken from tpope's vim-sensible)
+" Don't use latin1. No, really.
+" (taken from tpope's vim-sensible)
 if &encoding ==# 'latin1' && has('gui_running')
     set encoding=utf-8
 endif
@@ -25,7 +26,7 @@ set fileformats=unix,dos
 " Cursor movement
 set backspace=indent,eol,start
 set scrolloff=5                 " Keep lines visible at top and bottom
-set sidescrolloff=5             " Keep lines visible at the sides
+set sidescrolloff=5             " Keep columns visible at the sides
 set smarttab
 
 " Display options
