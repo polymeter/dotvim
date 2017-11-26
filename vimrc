@@ -26,7 +26,6 @@ set fileencodings=utf-8,latin1
 set fileformats=unix,dos
 
 " Cursor movement
-set autoindent
 set backspace=indent,eol,start
 set scrolloff=5                 " Keep lines visible at top and bottom
 set sidescrolloff=5             " Keep lines visible at the sides
@@ -107,7 +106,7 @@ if has('gui_running')
 endif
 
 " Colors
-set background=dark
+" ------
 
 " Solarized is used as a plugin, so only attempt to set if plugins are loaded.
 if exists('g:plugins_loaded')
