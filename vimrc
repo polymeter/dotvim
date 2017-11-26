@@ -14,9 +14,6 @@ endif
 " General options
 " ---------------
 
-filetype plugin indent on
-syntax on
-
 " Don't use latin1 (taken from tpope's vim-sensible)
 if &encoding ==# 'latin1' && has('gui_running')
     set encoding=utf-8
@@ -76,14 +73,6 @@ set ignorecase
 set incsearch   " Show matches while typing
 set smartcase   " Override 'ignorecase' when pattern contains uppercase
 
-" Statusline
-set laststatus=2
-set statusline=[%n]\                    " Buffer number
-set statusline+=%<%f\                   " Filename
-set statusline+=%m%w%h%r                " Modified/preview/help/ro flags
-set statusline+=\ %y[%{&ff}]            " File type and line-endings
-set statusline+=%=%-14.(%l,%c%V%)\ %P   " Right-aligned nav info
-
 " Wildmenu
 set wildmenu                    " Enable wildmenu command completion
 set wildmode=list:longest,full  " Tab-complete longest common part, then all
@@ -108,11 +97,7 @@ endif
 " Colors
 " ------
 
-" Solarized is used as a plugin, so only attempt to set if plugins are loaded.
-if exists('g:plugins_loaded')
-    colorscheme solarized
-    call togglebg#map("<F11>") " solarized-specific function
-endif
+colorscheme solarized
 
 " Allow color schemes to do bright colors without forcing bold.
 " (taken from tpope's vim-sensible)
@@ -129,56 +114,49 @@ let maplocalleader="\\"
 " Plugins
 " -------
 
-" Only attempt to configure plugins if vim-plug was loaded
-if exists('g:plugins_loaded')
-    " --- General plugins ---
-
-    " Airline
-    let g:airline_theme='solarized'
-    let g:airline_left_sep=''
-    let g:airline_right_sep=''
-    let g:airline_mode_map = {
-        \ '__' : '-',
-        \ 'n'  : 'N',
-        \ 'i'  : 'I',
-        \ 'R'  : 'R',
-        \ 'c'  : 'C',
-        \ 'v'  : 'V',
-        \ 'V'  : 'VL',
-        \ '' : 'VB',
-        \ 's'  : 'S',
-        \ 'S'  : 'SL',
-        \ '' : 'SB',
-        \ }
-    let g:airline#extensions#ale#enabled = 1
-
-    " NERDTree
-    nnoremap <F2> :NERDTreeToggle<CR>
-
-    " ALE
-    let g:ale_echo_msg_format = '[%linter%] %s'
-    let g:ale_fixers = {
-        \ 'python': ['isort']
+" Airline
+let g:airline_theme='solarized'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'VL',
+    \ '' : 'VB',
+    \ 's'  : 'S',
+    \ 'S'  : 'SL',
+    \ '' : 'SB',
     \ }
+let g:airline#extensions#ale#enabled = 1
 
-    " --- Language-specific plugins ---
+" NERDTree
+nnoremap <F2> :NERDTreeToggle<CR>
 
-    " LaTeX
-    let g:tex_flavor = 'latex'
-    if has('gui_running')
-        let g:vimtex_compiler_progname = "gvim"
-    else
-        let g:vimtex_compiler_progname = "vim"
-    endif
-    if has('win32') || has('win64')
-        let g:vimtex_view_general_viewer = 'SumatraPDF'
-        let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
-        let g:vimtex_view_general_options_latexmk = '-reuse-instance'
-    endif
+" ALE
+let g:ale_echo_msg_format = '[%linter%] %s'
+let g:ale_fixers = {
+    \ 'python': ['isort']
+\ }
 
-    " Python
-    let g:jedi#force_py_version = 3
+" LaTeX
+let g:tex_flavor = 'latex'
+if has('gui_running')
+    let g:vimtex_compiler_progname = "gvim"
+else
+    let g:vimtex_compiler_progname = "vim"
 endif
+if has('win32') || has('win64')
+    let g:vimtex_view_general_viewer = 'SumatraPDF'
+    let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
+    let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+endif
+
+" Python
+let g:jedi#force_py_version = 3
 
 " Commands
 " --------

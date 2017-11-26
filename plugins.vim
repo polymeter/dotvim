@@ -53,6 +53,4 @@ Plug 'vim-scripts/python_match.vim'
 
 " Energize!
 call plug#end()
-
-let g:plugins_loaded = 1
 endif
