@@ -166,9 +166,14 @@ let g:jedi#force_py_version = 3
 augroup StripTrailWS
     autocmd!
     autocmd BufWritePre * call StripTrailingWhitespace()
+    autocmd FileType markdown let b:keepTrailingWhitespace=1
 augroup END
 
 function! StripTrailingWhitespace() abort
+    if exists('b:keepTrailingWhitespace')
+        " Use buffer-local variable to prevent stripping
+        return
+    endif
     let _s=@/
     let l = line(".")
     let c = col(".")
