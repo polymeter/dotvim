@@ -1,3 +1,4 @@
+" vim-plug initialization {{{
 " Detect platform-specific vim config directory
 if (has('win32') || has('win64')) && &shellcmdflag =~ '/'
     let g:vimdir='~/vimfiles/'
@@ -11,8 +12,8 @@ if filereadable(s:pluginfile)
     execute 'source' s:pluginfile
 endif
 
-" General
-" -------
+" }}}
+" General {{{
 
 " Don't use latin1. No, really.
 " (taken from tpope's vim-sensible)
@@ -95,8 +96,8 @@ if has('gui_running')
     endif
 endif
 
-" Colors
-" ------
+" }}}
+" Colors {{{
 
 colorscheme solarized
 
@@ -106,8 +107,8 @@ if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
 
-" Mappings etc.
-" -------------
+" }}}
+" Mappings {{{
 
 let mapleader=","
 let maplocalleader="\\"
@@ -116,8 +117,8 @@ let maplocalleader="\\"
 nnoremap j gj
 nnoremap k gk
 
-" Plugins
-" -------
+" }}}
+" Plugins {{{
 
 " Airline
 let g:airline_theme='solarized'
@@ -163,8 +164,8 @@ endif
 " Python
 let g:jedi#force_py_version = 3
 
-" Commands
-" --------
+" }}}
+" Commands {{{
 
 " Strip trailing whitespace on save
 augroup StripTrailWS
@@ -186,8 +187,11 @@ function! StripTrailingWhitespace() abort
     call cursor(l, c)
 endfunction
 
+" }}}
+" Local vimrc {{{
 " Load local machine-specific config, if present
 let s:localrcfile = expand(g:vimdir . 'vimrc.local')
 if filereadable(s:localrcfile)
     execute 'source' s:localrcfile
 endif
+" }}}
