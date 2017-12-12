@@ -112,6 +112,10 @@ endif
 let mapleader=","
 let maplocalleader="\\"
 
+" Vertical movement by visual line (do not skip over wraps)
+nnoremap j gj
+nnoremap k gk
+
 " Plugins
 " -------
 
