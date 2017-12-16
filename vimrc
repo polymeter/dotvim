@@ -38,6 +38,7 @@ set lazyredraw                  " No redraw during macros
 set linebreak                   " Don't break inside words
 set list                        " Highlight listchars (see below)
 set number                      " Enable line numbering
+set relativenumber              " Enable relative numbering by default
 set ruler                       " Display line and column numbers
 let &showbreak = "\u2192\ "     " Show arrow symbol for indented wrapped lines
 set showcmd                     " Show command in status line
@@ -116,6 +117,8 @@ let maplocalleader="\\"
 " Vertical movement by visual line (do not skip over wraps)
 nnoremap j gj
 nnoremap k gk
+
+nnoremap <leader>n :setlocal relativenumber!<cr>
 
 " }}}
 " Plugins {{{
