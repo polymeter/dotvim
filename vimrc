@@ -119,6 +119,7 @@ nnoremap j gj
 nnoremap k gk
 
 nnoremap <leader>n :setlocal relativenumber!<cr>
+nnoremap <leader>/ :nohlsearch<cr>
 
 " }}}
 " Plugins {{{
