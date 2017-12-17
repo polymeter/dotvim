@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'qpkorr/vim-bufkill'
 
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/matchit.zip'
