@@ -1,4 +1,4 @@
-" vim-plug initialization {{{
+" Plugins {{{
 " Detect platform-specific vim config directory
 if (has('win32') || has('win64')) && &shellcmdflag =~ '/'
     let g:vimdir='~/vimfiles/'
@@ -6,10 +6,45 @@ else
     let g:vimdir='~/.vim/'
 endif
 
-" Load plugins
-let s:pluginfile = expand(g:vimdir . 'plugins.vim')
-if filereadable(s:pluginfile)
-    execute 'source' s:pluginfile
+silent! if plug#begin(g:vimdir . 'plugged')
+
+" General plugins
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'scrooloose/nerdtree'
+Plug 'qpkorr/vim-bufkill'
+
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'vim-scripts/matchit.zip'
+
+Plug 'w0rp/ale'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+
+" HTML / CSS
+Plug 'othree/html5.vim'
+Plug 'alvan/vim-closetag'
+
+" Jinja2
+Plug 'Glench/Vim-Jinja2-Syntax'
+
+" LaTeX
+Plug 'lervag/vimtex'
+
+" Python
+Plug 'davidhalter/jedi-vim'
+Plug 'mitsuhiko/vim-python-combined'
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/python_match.vim'
+
+call plug#end()
 endif
 
 " }}}
@@ -122,7 +157,7 @@ nnoremap <leader>n :setlocal relativenumber!<cr>
 nnoremap <leader>/ :nohlsearch<cr>
 
 " }}}
-" Plugins {{{
+" Plugin config {{{
 
 " Airline
 let g:airline_theme='solarized'
