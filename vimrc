@@ -149,9 +149,10 @@ endif
 let mapleader=","
 let maplocalleader="\\"
 
-" Vertical movement by visual line (do not skip over wraps)
-nnoremap j gj
-nnoremap k gk
+" Vertical movement by visual line (do not skip over wraps, except with count)
+" Taken from https://bluz71.github.io/2017/05/15/vim-tips-tricks.html
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
 
 nnoremap <leader>n :setlocal relativenumber!<cr>
 nnoremap <leader>/ :nohlsearch<cr>
