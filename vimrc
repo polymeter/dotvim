@@ -27,6 +27,7 @@ Plug 'w0rp/ale'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'airblade/vim-gitgutter'
 
 " HTML / CSS
 Plug 'othree/html5.vim'
@@ -101,6 +102,7 @@ set autoread        " Automatically read files when changed on disk
 set autowrite       " Automatically write files on buffer change etc.
 set history=1000
 set noswapfile
+set updatetime=250  " Shorter delay, mostly for gitgutter
 
 " Folding
 set foldlevelstart=99   " Generally start with all folds open
