@@ -79,6 +79,7 @@ set ruler                       " Display line and column numbers
 let &showbreak = "\u2192\ "     " Show arrow symbol for indented wrapped lines
 set showcmd                     " Show command in status line
 set showmatch                   " Highlight matching brackets
+set noshowmode                  " Mode info is already in the status line
 
 " Special characters for highlighting tabs, trailing spaces etc.
 if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8')
