@@ -14,7 +14,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'tpope/vim-vinegar'
+
 Plug 'qpkorr/vim-bufkill'
 
 Plug 'tpope/vim-commentary'
@@ -181,9 +182,6 @@ let g:airline_mode_map = {
     \ '' : 'SB',
     \ }
 let g:airline#extensions#ale#enabled = 1
-
-" NERDTree
-nnoremap <F2> :NERDTreeToggle<CR>
 
 " ALE
 let g:ale_echo_msg_format = '[%linter%] %s'
