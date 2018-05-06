@@ -141,6 +141,8 @@ endif
 
 colorscheme solarized
 
+set background=dark
+
 " Allow color schemes to do bright colors without forcing bold.
 " (taken from tpope's vim-sensible)
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
