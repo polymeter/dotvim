@@ -25,6 +25,8 @@ Plug 'vim-scripts/matchit.zip'
 
 Plug 'w0rp/ale'
 
+Plug 'junegunn/fzf.vim'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
@@ -154,6 +156,10 @@ nnoremap <expr> k v:count ? 'k' : 'gk'
 
 nnoremap <leader>n :setlocal relativenumber!<cr>
 nnoremap <leader>/ :nohlsearch<cr>
+
+" fzf
+nmap ; :Buffers<cr>
+nmap <leader>t :Files<cr>
 
 " }}}
 " Plugin config {{{
