@@ -222,6 +222,12 @@ function! StripTrailingWhitespace() abort
     call cursor(l, c)
 endfunction
 
+" Tabs etc. must not be highlighted in netrw
+augroup netrw_config
+    autocmd!
+    autocmd FileType netrw set nolist
+augroup END
+
 " }}}
 " Local vimrc {{{
 " Load local machine-specific config, if present
