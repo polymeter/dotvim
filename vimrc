@@ -128,14 +128,6 @@ set splitright  " Open vsplit windows right of current
 set shellslash      " Use forward slashes even on windows
 set winaltkeys=no
 
-" GUI settings
-if has('gui_running')
-    set guioptions=""   " Disable menus in gvim
-    if has('win32') || has('win64')
-        set guifont=Consolas:h10,Courier\ New:h10
-    endif
-endif
-
 " }}}
 " Colors {{{
 
