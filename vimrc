@@ -48,6 +48,9 @@ Plug 'mitsuhiko/vim-python-combined'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/python_match.vim'
 
+" Yocto / Bitbake
+Plug 'kergoth/vim-bitbake'
+
 call plug#end()
 endif
 
