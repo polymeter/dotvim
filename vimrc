@@ -21,7 +21,6 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'vim-scripts/matchit.zip'
 
 Plug 'w0rp/ale'
 
@@ -33,13 +32,14 @@ else
 endif
 Plug 'junegunn/fzf.vim'
 
+Plug 'sheerun/vim-polyglot'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
 " HTML / CSS
-Plug 'othree/html5.vim'
 Plug 'alvan/vim-closetag'
 
 " Jinja2
@@ -50,9 +50,7 @@ Plug 'lervag/vimtex'
 
 " Python
 Plug 'davidhalter/jedi-vim'
-Plug 'mitsuhiko/vim-python-combined'
 Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/python_match.vim'
 
 " Yocto / Bitbake
 Plug 'kergoth/vim-bitbake'
