@@ -25,6 +25,12 @@ Plug 'vim-scripts/matchit.zip'
 
 Plug 'w0rp/ale'
 
+" Use the brew-installed version of fzf, if present
+if isdirectory('/opt/homebrew/opt/fzf')
+    Plug '/opt/homebrew/opt/fzf'
+else
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+endif
 Plug 'junegunn/fzf.vim'
 
 " Git
