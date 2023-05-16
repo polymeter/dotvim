@@ -162,6 +162,7 @@ nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 
 nnoremap <leader>n :setlocal relativenumber!<cr>
+nnoremap <leader>N :setlocal number!<cr>
 nnoremap <leader>/ :nohlsearch<cr>
 
 " fzf
